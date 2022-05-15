@@ -3,7 +3,7 @@ package main.java;
 public class LinkedListReverser {
 
     public LinkedList reverse(LinkedList linkedList) {
-        Node reversedHeadNode = reverseNode(linkedList.getHead());
+        Node reversedHeadNode = reverseNode(linkedList.head);
         return new LinkedList(reversedHeadNode);
     }
 
@@ -12,13 +12,13 @@ public class LinkedListReverser {
             return null;
         }
 
-        if (node.getNext() == null) {
+        if (node.next == null) {
             return node;
         }
 
-        Node reversed = reverseNode(node.getNext());
-        node.getNext().setNext(node);
-        node.setNext(null);
+        Node reversed = reverseNode(node.next);
+        node.next.next = node;
+        node.next = null;
 
         return reversed;
     }

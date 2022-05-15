@@ -1,8 +1,8 @@
 package main.java;
 
 public class LinkedList {
-    private Node head;
-    private Node last;
+    public Node head;
+    public Node last;
 
     public LinkedList() {
         head = null;
@@ -17,19 +17,15 @@ public class LinkedList {
             head = node;
             last = head;
         }
-        last.setNext(node);
+        last.next = node;
         last = node;
-    }
-
-    public Node getHead() {
-        return head;
     }
 
     public void printList() {
         Node node = head;
         while (node != null) {
-            System.out.print("[" + node.getData() + "]");
-            node = node.getNext();
+            System.out.print("[" + node.data + "]");
+            node = node.next;
         }
     }
 }
