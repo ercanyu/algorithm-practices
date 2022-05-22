@@ -1,12 +1,17 @@
 package main.java;
 
-public class Main {
+public class BinarySearchTree {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
         Node root = createBalancedBinarySearchTree(array, 0, array.length - 1);
         if (root != null) {
             root.print();
         }
+    }
+
+    public static Node sampleBinarySearchTree() {
+        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        return createBalancedBinarySearchTree(array, 0, array.length - 1);
     }
 
     private static Node createBalancedBinarySearchTree(int[] array, int left, int right) {
