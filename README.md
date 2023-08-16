@@ -1,2 +1,2 @@
 # algorithm-practices
-algorithm practices
+algorithm practices.
